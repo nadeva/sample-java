@@ -14,14 +14,10 @@ jobs:
         run: echo "${{vars.TEST_VAR}}"
       - name: "Say Hello Mona it's Monday"
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK! ${{ env.DAY_OF_WEEK }} ${{env.TEST_VAR}}"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK! other syntax ${{ env.DAY_OF_WEEK }} "
         env:
           First_Name: Mona
-      - name: Echo variable test
-        run: echo ${{github.TEST_VAR}}
       - name: Print secret
         run: echo ${{ secrets.SECRET_VAR }}
-      - name: testPrint secret
-        run: echo $SECRET_VAR
 
 
