@@ -1,0 +1,11 @@
+# write an action that echoes variable TEST_VAR and prints the value of the secret SECRET_VAR
+name: Test print variable
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo variable
+        run: echo ${{ secrets.TEST_VAR }}
+      - name: Print secret
+        run: echo ${{ secrets.SECRET_VAR }}
