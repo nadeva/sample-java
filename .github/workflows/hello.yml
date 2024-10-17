@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo variable
-        run: echo $TEST_VAR
+        run: echo ${{env.TEST_VAR}}
       - name: Print secret
         run: echo ${{ secrets.SECRET_VAR }}
       - name: testPrint secret
