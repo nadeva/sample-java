@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo variable
-        run: echo "${{env.TEST_VAR}}"
+        run: echo "${{vars.TEST_VAR}}"
       - name: "Say Hello Mona it's Monday"
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK! ${{ env.DAY_OF_WEEK }} ${{env.TEST_VAR}}"
