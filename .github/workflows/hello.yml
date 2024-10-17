@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Echo variable
         run: echo ${{env.TEST_VAR}}
+      - name: Echo variable test
+        run: echo ${{github.TEST_VAR}}
       - name: Print secret
         run: echo ${{ secrets.SECRET_VAR }}
       - name: testPrint secret
